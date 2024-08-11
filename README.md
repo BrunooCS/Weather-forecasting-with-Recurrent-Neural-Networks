@@ -1,4 +1,6 @@
 Here is an overview of the contents of the "Weather Forecasting" notebook, which compares different models such as Dense, Convolutional+Dense, LSTM, GRU, and Attention LSTM:
+![](https://i.pinimg.com/originals/e1/70/03/e17003d3a86823bea8a48e4ec03d33e9.gif)
+**Link:** [Dataset](https://www.kaggle.com/datasets/mnassrib/jena-climate)
 
 1. **Introduction and Setup**
    - Description of the project for weather forecasting using various deep learning models.
