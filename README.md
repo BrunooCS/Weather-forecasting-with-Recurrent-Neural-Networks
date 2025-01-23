@@ -26,6 +26,9 @@ A weather forecasting project that leverages the power of deep learning to predi
 
 This project is designed to harness various deep learning techniques to forecast weather patterns accurately. Using the [Jena Climate Dataset](https://www.kaggle.com/datasets/mnassrib/jena-climate), this project explores and compares the performance of different neural network architectures in predicting future weather conditions based on historical data.
 
+![Weather Variables](imgs/variables.png)
+
+
 ### Objectives
 
 - **Compare Multiple Models**: Evaluate the effectiveness of various deep learning models in weather forecasting.
@@ -98,37 +101,6 @@ Each model was evaluated using **Mean Squared Error (MSE)** to assess prediction
 Visualizations of the models' predictions against actual weather data.
 
 ![Prediction Comparison](imgs/prediction.png)
-
----
-
-## Project Architecture
-
-### 1. Introduction and Setup
-- **Objective**: Define the project's goals and outline the methodologies.
-- **Libraries**: Import essential libraries such as `pandas`, `numpy`, `matplotlib`, `plotly`, `PyTorch`, and `scikit-learn`.
-
-### 2. Data Preprocessing
-- **Data Loading**: Utilize `pandas` to load the Jena Climate Dataset.
-- **Exploration & Visualization**: Use `matplotlib` and `plotly` to explore and visualize weather variables.
-- **Normalization & Splitting**: Normalize the data and split it into training and testing sets to prepare for model training.
-
-![Weather Variables](imgs/variables.png)
-
-### 3. Model Definitions
-- **DNN**: Implement a fully connected neural network as the baseline.
-- **CNN + DNN**: Combine convolutional layers with dense layers for enhanced feature extraction.
-- **LSTM**: Build a recurrent neural network to capture temporal dependencies.
-- **GRU**: Develop a GRU-based model for efficient sequence modeling.
-- **Attention LSTM**: Incorporate an attention mechanism into the LSTM to improve focus on relevant data points.
-
-### 4. Model Training and Evaluation
-- **Training**: Train each model using the preprocessed data.
-- **Evaluation**: Assess model performance using metrics like MSE.
-- **Visualization**: Plot training history and prediction results to analyze performance.
-
-### 5. Comparison of Results
-- **Performance Metrics**: Compare models based on their MSE scores.
-- **Discussion**: Analyze the strengths and weaknesses of each model in the context of weather forecasting.
 
 ---
 
