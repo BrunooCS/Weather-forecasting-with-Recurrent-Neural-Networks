@@ -1,112 +1,75 @@
-# Advanced Weather Forecasting with Deep Learning
-
-<img src="https://i.pinimg.com/originals/e1/70/03/e17003d3a86823bea8a48e4ec03d33e9.gif" width="600">
-
-A weather forecasting project that leverages the power of deep learning to predict future weather conditions with high accuracy. By comparing multiple advanced neural network architectures.
-
----
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Deep Learning Models](#deep-learning-models)
-  - [Dense Neural Network (DNN)](#dense-neural-network-dnn)
-  - [Convolutional Neural Network + Dense (CNN + DNN)](#convolutional-neural-network--dense-cnn--dnn)
-  - [Long Short-Term Memory (LSTM)](#long-short-term-memory-lstm)
-  - [Gated Recurrent Unit (GRU)](#gated-recurrent-unit-gru)
-  - [Attention LSTM](#attention-lstm)
-- [Results](#results)
-- [Project Architecture](#project-architecture)
-- [License](#license)
-- [References](#references)
+<h1 align="center">
+Advanced Weather Forecasting with Deep Learning
+</h1>
+<p align="center">
+  <img src="https://i.pinimg.com/originals/e1/70/03/e17003d3a86823bea8a48e4ec03d33e9.gif" alt="Weather Forecasting Animation" width="600">
+</p>
 
 ---
 
-## Project Overview
+## Overview
 
-This project is designed to harness various deep learning techniques to forecast weather patterns accurately. Using the [Jena Climate Dataset](https://www.kaggle.com/datasets/mnassrib/jena-climate), this project explores and compares the performance of different neural network architectures in predicting future weather conditions based on historical data.
+**Advanced Weather Forecasting with Deep Learning** leverages state-of-the-art neural network architectures to predict future weather conditions with high accuracy. Using historical data from the [Jena Climate Dataset](https://www.kaggle.com/datasets/mnassrib/jena-climate), this project explores and compares various deep learning models—all within an interactive, self-contained Jupyter Notebook.
 
-![Weather Variables](imgs/variables.png)
+---
 
+## Built With
 
-### Objectives
+<p align="center">
+  <a href="https://www.python.org/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" width="80">
+  </a>
+  <a href="https://pytorch.org/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" alt="PyTorch" width="80">
+  </a>
+</p>
 
-- **Compare Multiple Models**: Evaluate the effectiveness of various deep learning models in weather forecasting.
-- **Enhance Prediction Accuracy**: Identify the model that provides the highest accuracy and reliability.
-- **Data-Driven Insights**: Gain insights into how different architectures handle temporal and spatial data in weather prediction.
+Harnessing the power of **Python** and **PyTorch**, this project examines a spectrum of deep learning models tailored for time-series weather forecasting.
 
 ---
 
 ## Deep Learning Models
 
-### Dense Neural Network
-
-A **Dense Neural Network** serves as the baseline model in this project. It consists of fully connected layers that process input features to make predictions. While simple, DNNs can capture complex relationships in the data but may struggle with temporal dependencies inherent in weather data.
-
-**Key Characteristics:**
-- **Architecture**: Multiple fully connected layers with activation functions.
-- **Strengths**: Simplicity and ease of implementation.
-- **Limitations**: May not effectively capture sequential patterns in data.
-
-### Convolutional Neural Network + Dense (CNN + DNN)
-
-The **CNN + DNN** model integrates convolutional layers with dense layers to enhance feature extraction from the data. Convolutional layers can capture spatial hierarchies, which is beneficial when dealing with multi-dimensional weather data.
-
-**Key Characteristics:**
-- **Architecture**: Convolutional layers followed by fully connected dense layers.
-- **Strengths**: Improved feature extraction and handling of spatial data.
-- **Limitations**: Increased complexity compared to pure DNNs.
-
-### Long Short-Term Memory (LSTM)
-
-**LSTM** networks are a type of recurrent neural network (RNN) designed to capture long-term dependencies in sequential data. They are particularly effective in modeling time-series data like weather patterns.
-
-**Key Characteristics:**
-- **Architecture**: Recurrent layers with memory cells to retain information over time.
-- **Strengths**: Excellent at capturing temporal dependencies and patterns.
-- **Limitations**: Computationally intensive and may require extensive training data.
-
-### Gated Recurrent Unit (GRU)
-
-**GRU** is a simplified version of LSTM that combines the forget and input gates into a single update gate. This reduces the complexity while maintaining performance in capturing temporal dependencies.
-
-**Key Characteristics:**
-- **Architecture**: Recurrent layers with gating mechanisms.
-- **Strengths**: Faster training and fewer parameters compared to LSTM.
-- **Limitations**: Slightly less expressive than LSTM in some scenarios.
-
-### Attention LSTM
-
-The **Attention LSTM** model enhances the traditional LSTM by incorporating an attention mechanism. This allows the model to focus on specific parts of the input sequence that are more relevant for making predictions, improving performance on complex tasks.
-
-**Key Characteristics:**
-- **Architecture**: LSTM layers with an added attention mechanism.
-- **Strengths**: Improved focus on important time steps, leading to better performance.
-- **Limitations**: Increased architectural complexity and computational requirements.
+- **Dense Neural Network (DNN):** A baseline model with fully connected layers to capture intricate data relationships.
+- **CNN + DNN:** Combines convolutional layers for spatial feature extraction with dense layers.
+- **Long Short-Term Memory (LSTM):** Captures long-term dependencies in sequential data.
+- **Gated Recurrent Unit (GRU):** A streamlined alternative to LSTM for efficient training.
+- **Attention LSTM:** Enhances LSTM by focusing on the most relevant time steps for improved predictions.
 
 ---
 
 ## Results
 
-The following sections present the performance metrics and visualizations comparing the different models used in **ClimaPredict AI**.
+The performance of each model is evaluated using Mean Squared Error (MSE), with visualizations comparing model predictions against actual weather data.
 
-### Model Performance
+<p align="center">
+  <img src="imgs/models.png" alt="Model Performance" width="600">
+</p>
 
-Each model was evaluated using **Mean Squared Error (MSE)** to assess prediction accuracy. The results indicate varying levels of performance across different architectures.
+<p align="center">
+  <img src="imgs/prediction.png" alt="Prediction Comparison" width="600">
+</p>
 
-![Model Performance](imgs/models.png)
+---
 
-### Prediction Comparison
+## Getting Started
 
-Visualizations of the models' predictions against actual weather data.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/BrunooCS/Weather-forecasting-with-Recurrent-Neural-Networks.git
+   ```
+2. **Open the Notebook:**
+   Launch Jupyter Notebook (or your preferred environment) and open `Weather Forecasting.ipynb`.
+3. **Run & Explore:**
+   Follow the in-notebook instructions to train, evaluate, and compare the various deep learning models.
 
-![Prediction Comparison](imgs/prediction.png)
+> **Tip:** The notebook is self-contained with code and detailed explanations, ensuring an intuitive learning experience.
 
 ---
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is open-sourced under the [MIT License](LICENSE).
 
 ---
 
@@ -116,7 +79,4 @@ This project is licensed under the [MIT License](LICENSE).
 - [Deep Learning for Time Series Forecasting](https://www.tensorflow.org/tutorials/structured_data/time_series)
 - [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 - [Attention Mechanism in Neural Networks](https://towardsdatascience.com/attention-mechanism-8eae7f91c9a5)
-- [GRU vs LSTM](https://machinelearningmastery.com/understanding-the-difference-between-lstm-and-gru-recurrent-neural-networks/)
-- [Convolutional Neural Networks](https://www.tensorflow.org/guide/keras/sequential_model)
-
----
+```
